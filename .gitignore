@@ -128,4 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-setvar.sh
+/setenv.sh
+.idea

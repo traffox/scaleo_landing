@@ -99,22 +99,11 @@
         </div>
         <div class="auth__form-control">
             {{ form.telegram(class_="auth__form-input form-input")}}
-{#                <input  type="text" name="telegram" class="auth__form-input form-input">#}
             <span  style=" top: 7px;" class="auth__form-placeholder">Телеграм/Skype</span>
              {% for error in form.telegram.errors %}
                <p style='color: red; text-align: center'>"{{ error }}"</p>
             {% endfor %}
         </div>
-
-{#        <div class="auth__form-control">#}
-{#            {{ form.skype(class_="auth__form-input formrm-input")}}#}
-{#            <input  type="text" name="skype" class="auth__form-input form-input">#}
-{#            <span  style=" top: 7px;" class="auth__form-placeholder">Skype</span>#}
-{#             {% for error in form.skype.errors %}#}
-{#               <p style='color: red; text-align: center'>"{{ error }}"</p>#}
-{#            {% endfor %}#}
-{#        </div>#}
-
     </div>
 
 
@@ -233,28 +222,6 @@
 
 	<script src="static/js/scripts.min.js"></script>
 
-
-{#<script>#}
-{#    function checkPasswordMatch() {#}
-{#    var window = $('#login-btn').getAttribute('href');#}
-{#    if (window == '#register')#}
-{#        myfunc()#}
-{#    }#}
-{##}
-{#    function myfunc() {#}
-{#    var password = $("#password").val();#}
-{#    var confirmPassword = $("#repassword").val();#}
-{##}
-{#    if (password != confirmPassword)#}
-{#        $("#divCheckPasswordMatch").html("<p style='color: red; text-align: center'>Пароли не совпадают</p>");#}
-{#    else#}
-{#        $("#divCheckPasswordMatch").html("<p style='color: green; text-align: center'>Пароли совпадают</p>");#}
-{#    }#}
-{##}
-{#    $(document).ready(function () {#}
-{#    $("#password, #repassword").keyup(checkPasswordMatch);#}
-{#});#}
-{#</script>#}
 
 <script>
     function checkPasswordMatch() {
