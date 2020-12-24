@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title> Гемблинг партнерка EDEM.partners | CPA сеть</title>
+	<meta name="description" content="EDEM.partners ➤ топовая гемблинг партнерка ➤ Gambling и Betting офферы с самыми высокими ставками ➤ Присоединяйся!" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="static/img/logo1.ico">
+	<link rel="shortcut icon" href="static/img/logo1.ico">
+	<link rel="stylesheet" href="static/css/styles.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<img src="static/img/logo.svg" alt="EDEM.partners" class="header__logo">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="auth auth__register">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<div class="auth__block">
+							<div class="auth__block-left">
+								<div class="auth__block-left__wrap"></div>
+								<div class="auth__block-left__top">
+									<img src="static/img/logo.svg" class="auth__logo">
+								</div>
+								<div class="auth__block-left__bottom auth__action">
+									<h3 class="auth__action-title">Присоединяйся</h3>
+									<p class="auth__action-desc">
+										Надежный партнер во всех смыслах.
+									</p>
+								</div>
+							</div>
+
+							<div class="auth__block-right">
+
+								<div class="auth__block-right__elem1"></div>
+								<div class="auth__block-right__elem2"></div>
+								<div class="auth__block-right__elem3"></div>
+
+
+								<div class="auth__choice">
+									<span class="auth__choice-thumb"></span>
+									<a href="#login" class="auth__choice-item auth__choice-login" id="login-btn">
+										Вход
+									</a>
+									<a href="#register"
+										class="auth__choice-item auth__choice-item_active auth__choice-register"
+										id="register-btn">
+										Регистрация
+									</a>
+								</div>
+
+
+<form method="post" class="mainForm auth__form">
+    {{ form.csrf_token() }}
+
+    <h4 class="auth__form-title">Регистрация</h4>
+    <div class="auth__form-main">
+
+        {% if msg %}
+            <p style='color: green; text-align: center'>"{{ msg }}"</p>
+        {% endif %}
+
+        {% if errors %}
+            {% for error in errors %}
+                <p style='color: red; text-align: center'>"{{ error }}"</p>
+            {% endfor %}
+        {% endif %}
+
+        <div class="auth__form-control form-control">
+            {{ form.email(class_="auth__form-input form-input" "required")}}
+            <span  style=" top: 7px;" class="auth__form-placeholder">E-mail</span>
+            {% for error in form.email.errors %}
+               <p style='color: red; text-align: center'>"{{ error }}"</p>
+            {% endfor %}
+        </div>
+        <div class="auth__form-control">
+            {{ form.password(class_="auth__form-input form-input")}}
+            <span  style=" top: 7px;" class="auth__form-placeholder">Пароль</span>
+             {% for error in form.password.errors %}
+               <p style='color: red; text-align: center'>"{{ error }}"</p>
+            {% endfor %}
+        </div>
+        <div class="auth__form-control">
+            <input  type="password" id="repassword" name="repassword" class="auth__form-input form-input" onChange="checkPasswordMatch();" required>
+            <span  style=" top: 7px;" class="auth__form-placeholder">Подтверждение пароля</span>
+            <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+        </div>
+        <div class="auth__form-control">
+            {{ form.telegram(class_="auth__form-input form-input")}}
+{#                <input  type="text" name="telegram" class="auth__form-input form-input">#}
+            <span  style=" top: 7px;" class="auth__form-placeholder">Телеграм/Skype</span>
+             {% for error in form.telegram.errors %}
+               <p style='color: red; text-align: center'>"{{ error }}"</p>
+            {% endfor %}
+        </div>
+
+{#        <div class="auth__form-control">#}
+{#            {{ form.skype(class_="auth__form-input formrm-input")}}#}
+{#            <input  type="text" name="skype" class="auth__form-input form-input">#}
+{#            <span  style=" top: 7px;" class="auth__form-placeholder">Skype</span>#}
+{#             {% for error in form.skype.errors %}#}
+{#               <p style='color: red; text-align: center'>"{{ error }}"</p>#}
+{#            {% endfor %}#}
+{#        </div>#}
+
+    </div>
+
+
+    <button type="submit" class="button auth__form-button">Зарегистрироваться</button>
+</form>
+
+								<a href="#" class="auth__forgot-password" data-izimodal-open="#modal-forgot">Забыли
+									пароль?</a>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-12 col-lg-6">
+					<div class="footer__company">
+						<span class="footer__company-info"><span class="footer__company-info__strong">© 2020.</span>
+							EDEM.partners</span>
+						<a href="#" class="footer__company-political" data-izimodal-open="#modal-political">
+							<img src="static/img/documents.svg" alt="icon-political" class="footer__company-political__icon">
+							Политика конфиденциальности
+						</a>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="footer__soc">
+						<a href="skype:@live:.cid.63ee3b49576950e" class="footer__soc-link" target="_blank">
+							<span class="footer__soc-link__left">
+								<img src="static/img/soc/skype.svg" alt="soc-icon" class="footer__soc-link__left-icon">
+							</span>
+							<span class="footer__soc-link__text">@live:.cid.63ee3b49576950e</span>
+						</a>
+						<a href="https://t.me/EDEM_support" class="footer__soc-link" target="_blank">
+							<span class="footer__soc-link__left">
+								<img src="static/img/soc/telegram.svg" alt="soc-icon" class="footer__soc-link__left-icon">
+							</span>
+							<span class="footer__soc-link__text">EDEM_support</span>
+						</a>
+						<a href="mailto:info@edempartners.com" class="footer__soc-link" target="_blank">
+							<span class="footer__soc-link__left">
+								<img src="static/img/soc/envelope.svg" alt="soc-icon" class="footer__soc-link__left-icon">
+							</span>
+							<span class="footer__soc-link__text">info@edem.partners</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal modal_forgot" id="modal-forgot">
+		<div class="modal_forgot__wrap">
+			<div class="modal__close modal__close_hidden" data-izimodal-close=""></div>
+			<h3 class="modal__title">
+				Введите Ваш E-mail для восстановления пароля
+			</h3>
+
+			<form class="modal__form" method="post">
+                {{ form.csrf_token() }}
+				<div class="form-control">
+					<input type="email" id="recover-mail" name="recover-mail" class="form-input" required>
+					<span class="form-placeholder">E-mail</span>
+				</div>
+				<button type="submit" class="button modal__button">Восстановить пароль</button>
+			</form>
+
+		</div>
+	</div>
+
+	<div class="modal modal_political" id="modal-political">
+		<div class="modal_political__wrap">
+			<div class="modal__close modal__close_hidden" data-izimodal-close=""></div>
+			<h3 class="modal__title">
+				Использование персональных данных
+			</h3>
+
+			<div class="modal__info">
+				<p class="modal__info-desc">
+					1. Отправкой заявки на регистрацию Пользователь дает Администрации сайта согласие на обработку своих
+					персональных данных;
+				</p>
+				<p class="modal__info-desc">
+					2. Цель обработки персональных данных: регистрация на Сайте, коммуникация с Пользователем,
+					внутреннее использование в целях Сайта;
+				</p>
+				<p class="modal__info-desc">
+					3. Обработке подлежат следующие персональные данные:
+					<br>- Имя, Фамилия Пользователя;
+					<br>- Электронный адрес Пользователя;
+					<br>- Контакты Пользователя.
+				</p>
+				<p class="modal__info-desc">
+					4. Под обработкой персональных данных подразумевается следующий перечень действий с персональными
+				данными: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение),
+				извлечение, использование, передачу (распространение, предоставление доступа), обезличивание,
+				блокирование, удаление, уничтожение персональных данных.
+				</p>
+				<p class="modal__info-desc">
+					5. Данное согласие на обработку и хранение персональных данных действует бессрочно, но может быть
+				отозвано субъектом персональных данных на основании личного заявления, направленного по электронной
+				почте Администрации сайта.
+				</p>
+				<p class="modal__info-desc">
+					6. Передача данных Пользователя третьим лицам НЕ допускается.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="static/js/scripts.min.js"></script>
+
+
+{#<script>#}
+{#    function checkPasswordMatch() {#}
+{#    var window = $('#login-btn').getAttribute('href');#}
+{#    if (window == '#register')#}
+{#        myfunc()#}
+{#    }#}
+{##}
+{#    function myfunc() {#}
+{#    var password = $("#password").val();#}
+{#    var confirmPassword = $("#repassword").val();#}
+{##}
+{#    if (password != confirmPassword)#}
+{#        $("#divCheckPasswordMatch").html("<p style='color: red; text-align: center'>Пароли не совпадают</p>");#}
+{#    else#}
+{#        $("#divCheckPasswordMatch").html("<p style='color: green; text-align: center'>Пароли совпадают</p>");#}
+{#    }#}
+{##}
+{#    $(document).ready(function () {#}
+{#    $("#password, #repassword").keyup(checkPasswordMatch);#}
+{#});#}
+{#</script>#}
+
+<script>
+    function checkPasswordMatch() {
+    var password = $("#password").val();
+    var confirmPassword = $("#repassword").val();
+
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("<p style='color: red; text-align: center'>Пароли не совпадают</p>");
+    else
+        $("#divCheckPasswordMatch").html("<p style='color: green; text-align: center'>Пароли совпадают</p>");
+}
+
+    $(document).ready(function () {
+    $("#password, #repassword").keyup(checkPasswordMatch);
+});
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+
+body,
+html {
+	font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	min-height: 100vh;
+}
+
+body {
+	background: url(../img/@1x/bg-main.jpg) center/cover no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+
+header {
+	flex: 0 0 auto;
+}
+
+main {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+footer {
+	flex: 0 0 auto;
+}
+
+a {
+	text-decoration: none !important;
+	transition: .3s;
+}
+
+input,
+button,
+textarea,
+a {
+	outline: none !important;
+}
+
+.button {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 48px;
+	border-radius: 24px;
+	background-image: linear-gradient(180deg, rgb(134, 233, 155) 0%, rgb(0, 204, 19) 100%);
+	box-shadow: 0px 0px 25.6px 6.4px rgba(38, 212, 57, 0.15);
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+	transition: .3s;
+
+	&:hover {
+		box-shadow: 0px 0px 25.6px 6.4px rgba(38, 212, 57, 0.25);
+	}
+
+	&:active {
+		background-image: linear-gradient(0deg, rgb(134, 233, 155) 0%, rgb(0, 204, 19) 100%);
+	}
+}
+
+.form-control {
+	position: relative;
+	max-width: 309px;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 18px;
+}
+
+.form-placeholder {
+	top: 14px;
+	left: 23px;
+	position: absolute;
+	color: #6d6d6d;
+	transition: .3s;
+	pointer-events: none;
+
+	&.active {
+		top: 3px;
+		font-size: 12px;
+	}
+}
+
+.form-input {
+	height: 48px;
+	background-color: #fbfbfb;
+	border: 1px solid #dde1e5;
+	border-radius: 24px;
+	width: 100%;
+	padding-left: 23px;
+	transition: .3s;
+	padding-top: 13px;
+
+	&:focus {
+		border-color: #1cd22f;
+		box-shadow: 0px 0px 7.4px 2.6px rgba(24, 209, 44, 0.11);
+	}
+
+	&:focus~.form-placeholder {
+		top: 3px;
+		font-size: 12px;
+		color: #29e23d;
+	}
+}
+
+@keyframes zoomBg {
+
+	0%,
+	100% {
+		transform: scale(1)
+	}
+
+	50% {
+		transform: scale(1.1)
+	}
+}
+
+@import 'header';
+@import 'auth';
+@import 'footer';
+@import 'modal';
+@import 'media';

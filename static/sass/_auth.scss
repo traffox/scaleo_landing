@@ -1,0 +1,276 @@
+.auth {
+
+    &__block {
+        margin: auto;
+        max-width: 944px;
+        width: 100%;
+        border-radius: 40px;
+        box-shadow: 0px 6px 49.84px 6.16px rgba(0, 0, 0, 0.14);
+        background-color: #fff;
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+
+        &-left {
+            width: 43%;
+            position: relative;
+            padding-top: 9.17vh;
+            padding-left: 42px;
+            padding-right: 42px;
+            padding-bottom: 7.57vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+
+            &>*:not(.auth__block-left__wrap) {
+                position: relative;
+            }
+
+            &__wrap {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(../img/auth-bg.jpg) center/cover no-repeat;
+                animation: zoomBg 10s ease-in-out infinite;
+            }
+
+            &__top {
+                text-align: center;
+            }
+        }
+
+        &-right {
+            width: 57%;
+            padding: 2.45vh 25px 13.87vh;
+            position: relative;
+            overflow: hidden;
+
+            &__elem1 {
+                position: absolute;
+                bottom: -394px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 485px;
+                height: 485px;
+                border-radius: 50%;
+                background-color: #f3f3f3;
+                opacity: 0.5;
+            }
+
+            &__elem2 {
+                position: absolute;
+                top: 43px;
+                left: -314px;
+                width: 485px;
+                height: 485px;
+                border-radius: 50%;
+                border: 50px solid #f3f3f3;
+                opacity: 0.3;
+            }
+
+            &__elem3 {
+                position: absolute;
+                top: 175px;
+                left: -106px;
+                width: 202px;
+                height: 202px;
+                background: url(../img/lock.svg) no-repeat;
+                background-size: 100%;
+                opacity: 0.2;
+            }
+        }
+    }
+
+    &__logo {
+        max-width: 204px;
+        width: 100%;
+    }
+
+    &__action {
+        color: #ffffff;
+
+        &-title {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        &-desc {
+            margin-bottom: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    &__choice {
+        overflow: hidden;
+        position: relative;
+        margin-left: auto;
+        margin-bottom: 7.47vh;
+        display: flex;
+        align-items: center;
+        width: 168px;
+        height: 30px;
+        background-color: #fbfbfb;
+        border-radius: 15px;
+        border: 1px solid #c6cbd0;
+
+        &-register {
+            width: 110px;
+        }
+
+        &-login {
+            width: 58px;
+        }
+
+        &-thumb {
+            position: absolute;
+            transition: .3s;
+            top: 0;
+            display: block;
+            left: 0;
+            transform: translateX(0);
+            right: auto;
+            height: 100%;
+            border-radius: inherit;
+            background-image: linear-gradient(180deg, rgb(134, 233, 155) 0%, rgb(0, 204, 19) 100%);
+        }
+
+        &-item {
+            font-weight: 500;
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $text;
+
+            &:hover {
+                color: inherit;
+            }
+
+            &_active {
+                color: #ffffff;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+
+
+        }
+    }
+
+    &__form {
+        position: relative;
+        max-width: 314px;
+        width: 100%;
+        margin: auto;
+
+        &-title {
+            font-weight: 800;
+            font-size: 24px;
+            margin-bottom: 2.66vh;
+        }
+
+        &-control {
+            position: relative;
+            max-width: 309px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 18px;
+        }
+
+        &-placeholder {
+            top: 14px;
+            left: 23px;
+            position: absolute;
+            color: #6d6d6d;
+            transition: .3s;
+            pointer-events: none;
+
+            &.active {
+                top: 3px;
+                font-size: 12px;
+            }
+        }
+
+        &-input {
+            height: 48px;
+            background-color: #fbfbfb;
+            border: 1px solid #dde1e5;
+            border-radius: 24px;
+            width: 100%;
+            padding-left: 23px;
+            transition: .3s;
+            padding-top: 13px;
+
+            &:focus {
+                border-color: #1cd22f;
+                box-shadow: 0px 0px 7.4px 2.6px rgba(24, 209, 44, 0.11);
+            }
+
+            &:focus~.auth__form-placeholder {
+                top: 3px;
+                font-size: 12px;
+                color: #29e23d;
+            }
+        }
+
+        &-mailing {
+            font-size: 12px;
+            position: relative;
+            margin-bottom: 25px;
+
+            &__info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    box-shadow: inset 0 0 0 1px #dde1e5;
+                    margin-right: 8px;
+                    background-color: #fbfbfb;
+                    transition: .3s;
+                }
+            }
+        }
+
+        &-checkbox {
+            display: none;
+
+            &:checked+.auth__form-mailing__info::before {
+                box-shadow: none;
+                background-image: url(../img/tick.svg), linear-gradient(180deg, rgb(134, 233, 155) 0%, rgb(0, 204, 19) 100%);
+                background-size: 12px 10px, 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    &__forgot-password {
+        position: relative;
+        text-align: center;
+        display: block;
+        width: fit-content;
+        margin: 25px auto 0;
+        font-size: 12px;
+        color: #7a7a7a;
+
+        &:hover {
+            color: #10d62a;
+        }
+    }
+
+
+}

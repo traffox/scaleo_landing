@@ -1,0 +1,227 @@
+@media only screen and (max-width : 1441px) {
+    .auth__action-title {
+        font-size: 24px;
+    }
+
+    .auth__action-desc {
+        font-size: 16px;
+    }
+
+    .auth__form-title {
+        font-size: 21px;
+    }
+
+    .auth__logo {
+        max-width: 191px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .auth__block-right__elem2 {
+        top: 43px;
+        left: -235px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .auth__block-right__elem3 {
+        top: 159px;
+        left: -74px;
+        width: 150px;
+        height: 171px;
+    }
+
+    .auth__block-right__elem1 {
+        bottom: -419px;
+    }
+}
+
+
+@media only screen and (max-width : 1199px) {
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer__soc-link {
+        margin-right: 25px;
+    }
+
+    .footer__soc-link__left {
+        margin-right: 7px;
+    }
+
+    .footer__company-info {
+        margin-right: 25px;
+    }
+
+    .footer__company {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width : 991px) {
+    .footer {
+        padding-top: 47px;
+
+        .row {
+            flex-direction: column-reverse;
+        }
+
+        &__company {
+            align-items: center;
+
+            &-info {
+                margin-right: 0;
+            }
+        }
+
+        &__soc {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+
+            &-link {
+                margin-right: 47px;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width : 910px) {
+
+    body,
+    html {
+        height: auto;
+    }
+
+    .auth__block-left {
+        display: none;
+    }
+
+    .auth__block-right {
+        width: 100%;
+    }
+
+    .auth__block {
+        max-width: 504px;
+    }
+
+    .header__logo {
+        display: block;
+        max-width: 160px;
+        margin: auto;
+    }
+
+    .header {
+        padding: 29px 0;
+    }
+
+    .auth__block-right {
+        padding-top: 23px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 43px;
+    }
+
+    .auth__block-right__elem1 {
+        bottom: -504px;
+        left: -14px;
+        width: 538px;
+        height: 538px;
+    }
+
+    .auth__choice {
+        margin-bottom: 42px;
+    }
+
+    .auth__form-control {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width : 668px) {
+    .footer__soc {
+        justify-content: flex-start;
+    }
+
+    .modal_political__wrap {
+        padding: 40px 20px;
+    }
+
+    .modal {
+        max-width: 95% !important;
+
+        .form-control {
+            max-width: 100%;
+        }
+    }
+
+    .modal__info {
+        padding-right: 40px;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 481px) {
+    .auth__block {
+        max-width: 364px;
+        border-radius: 20px;
+    }
+
+    .auth__block-right__elem1 {
+        left: -85px;
+    }
+
+    .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .auth__block-right__elem2 {
+        width: 183px;
+        height: 183px;
+        border-width: 25px;
+        top: -39px;
+        left: -59px;
+    }
+
+    .auth__block-right__elem3 {
+        width: 38px;
+        height: 51px;
+        top: 23px;
+        left: 24px;
+        opacity: 0.3;
+    }
+
+    .auth__form-title {
+        margin-bottom: 26px;
+    }
+
+}
+
+@media only screen and (max-width : 405px) {
+    .footer__soc-link {
+        margin-right: 25px;
+    }
+}
+
+@media only screen and (max-width : 375px) {
+    .auth__block-right__elem1 {
+        left: -92px;
+    }
+}
+
+@media only screen and (max-width : 363px) {
+    .footer__soc-link {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width : 321px) {}
